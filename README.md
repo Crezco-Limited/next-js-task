@@ -1,3 +1,46 @@
+# Crezco interview task
+
+Hello, this is a (hopefully short) task to give you a chance to demonstrate your skills with frontend technologies.
+
+This repo is a fork of https://github.com/datocms/nextjs-demo/tree/master, below is the original project README, with details about the repo and getting setup.
+
+We’ve already created a demo Dato project which you should have been invited to https://next-js-blog-demo-5938.admin.datocms.com
+
+You’ll need to drop in the API token from there using the steps below.
+
+## The task
+
+We’d like you to add a sidebar component to the [blog post template](https://github.com/Crezco-Limited/next-js-task/blob/main/pages/posts/%5Bslug%5D.js) that shows related posts.
+
+We’ve already added to the model in Dato, you can see the [new object here](https://next-js-blog-demo-5938.admin.datocms.com/admin/item_types/1467316/fields/7313955/edit
+)
+And the GraphQL fragment to get the data looks like this:
+
+```
+relatedPosts {
+  id
+  title
+  slug
+  author {
+    name
+    picture {
+      responsiveImage {
+        alt
+        base64
+        bgColor
+        title
+      }
+    }
+  }
+}
+```
+
+You can [explore the query API more, if you like, here](https://next-js-blog-demo-5938.admin.datocms.com/cda-explorer).
+
+Please style as you see fit, the project uses [TailwindCSS](https://tailwindcss.com/).
+
+
+==========================================
 # A Blog example using Next.js and DatoCMS
 
 This example showcases a Next.js Blog using [DatoCMS](https://www.datocms.com/) as the data source. It fully supports [Preview Mode](https://www.datocms.com/docs/next-js/setting-up-next-js-preview-mode) with [DatoCMS real-time updates](https://www.datocms.com/docs/next-js/real-time-updates).
